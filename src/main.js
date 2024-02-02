@@ -1,4 +1,12 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import UtriggAnalytics from 'utrigg-analytics-vue';
 
-createApp(App).mount('#app')
+import App from './App.vue'
+const app = createApp(App)
+
+app.use(
+    UtriggAnalytics, // analytics plugin
+    { alias: 'd6ff16a00fa982b09cff' } // config object
+);
+
+app.mount('#app')
